@@ -1,15 +1,30 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
     "jsx": "react",
-    "module": "commonjs",
+    "experimentalDecorators": true,
+    //"module": "commonjs",
     "noImplicitAny": true,
     "outDir": "./build/",
     "preserveConstEnums": true,
     "removeComments": true,
-    "sourceMap": true,
-    "target": "es6"
+    "sourceMap": true
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["src"]
 }

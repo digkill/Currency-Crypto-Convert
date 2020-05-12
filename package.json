@@ -5,9 +5,20 @@
   "main": "index.js",
   "author": "Vitaliy Edifanov <vitaliy@edifanov.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build": "webpack -p",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dev": "webpack --mode development"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "axios": "^0.19.2",
+    "browser-sync": "^2.26.7",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.35",
@@ -19,10 +30,5 @@
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
   }
 }

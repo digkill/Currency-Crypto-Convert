@@ -20,7 +20,6 @@ module.exports =
                         }
                     ],
                     exclude: /node_modules/
-
                 },
                 {
                     enforce: "pre",

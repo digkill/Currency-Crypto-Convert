@@ -1,14 +1,25 @@
-import * as React from "react";
+import React from 'react';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
-import {HelloWorld} from "./components/HelloWorld";
-import {Component} from "react";
+import { CryptoTable, Converter } from './components';
+import useStyles from './styles';
 
-class App extends Component {
-    render() {
-        return (
-            <HelloWorld firstName='Vitaliy' lastName='Edifanov' />
-        );
-    }
+function App() {
+    const classes: any = useStyles();
+
+    return (
+        <Container className={classes.root} maxWidth="lg">
+            <Grid container spacing={3}>
+                <Grid item xs={8}>
+                    <CryptoTable classes={classes} />
+                </Grid>
+                <Grid item xs={4}>
+                    <Converter classes={classes} />
+                </Grid>
+            </Grid>
+        </Container>
+    );
 }
 
 export default App;
