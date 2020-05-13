@@ -32,7 +32,7 @@ const CryptoTable = inject(
                 currenciesStore.fetchCoins();
                 setInterval(() => {
                     currenciesStore.fetchCoins();
-                }, 30 * 1000);
+                }, 10000);
             }
         }, []);
 

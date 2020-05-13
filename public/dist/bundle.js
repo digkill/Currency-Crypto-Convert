@@ -60990,9 +60990,9 @@ function reducer(state, action) {
 const Converter = Object(mobx_react__WEBPACK_IMPORTED_MODULE_1__["inject"])('currenciesStore', 'converterStore')(Object(mobx_react__WEBPACK_IMPORTED_MODULE_1__["observer"])(({ classes, currenciesStore, converterStore }) => {
     var _a;
     const [selectedOutCoin, setSelectedOutCoin] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState('USD');
-    const coins = currenciesStore.getItems.map(coin => coin.name);
+    const coins = currenciesStore.getItems.map((coin) => coin.name);
     const inPrice = Number(converterStore === null || converterStore === void 0 ? void 0 : converterStore.getSelectedCoin.price) || 0;
-    const outPrice = Number((_a = currenciesStore.getItems.find(obj => obj.name === selectedOutCoin)) === null || _a === void 0 ? void 0 : _a.price) || 0;
+    const outPrice = Number((_a = currenciesStore.getItems.find((obj) => obj.name === selectedOutCoin)) === null || _a === void 0 ? void 0 : _a.price) || 0;
     const [state, dispatch] = react__WEBPACK_IMPORTED_MODULE_0___default.a.useReducer(reducer, {
         value1: '',
         value2: '',
@@ -61029,7 +61029,7 @@ const Converter = Object(mobx_react__WEBPACK_IMPORTED_MODULE_1__["inject"])('cur
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3__["default"], { type: "number", value: state.value2, label: "\u0421\u0443\u043C\u043C\u0430" })),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormControl__WEBPACK_IMPORTED_MODULE_6__["default"], { className: classes.currencyType },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_InputLabel__WEBPACK_IMPORTED_MODULE_7__["default"], { shrink: true, id: "demo-simple-select-placeholder-label-label" }, "\u0412\u0430\u043B\u044E\u0442\u0430"),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_4__["default"], { onChange: e => setSelectedOutCoin(e.target.value), value: selectedOutCoin },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Select__WEBPACK_IMPORTED_MODULE_4__["default"], { onChange: (e) => setSelectedOutCoin(e.target.value), value: selectedOutCoin },
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], { value: "USD" }, "USD"),
                     coins.map(name => (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_MenuItem__WEBPACK_IMPORTED_MODULE_5__["default"], { value: name }, name))))))));
 }));
@@ -61074,7 +61074,7 @@ const CryptoTable = Object(mobx_react__WEBPACK_IMPORTED_MODULE_1__["inject"])('c
             currenciesStore.fetchCoins();
             setInterval(() => {
                 currenciesStore.fetchCoins();
-            }, 30 * 1000);
+            }, 10000);
         }
     }, []);
     const onClickRow = (coin) => {

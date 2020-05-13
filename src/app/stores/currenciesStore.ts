@@ -44,7 +44,7 @@ class CurrenciesStore {
     fetchCoins = () => {
         axios
             .get('https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=USD')
-            .then(({ data }) => {
+            .then(({ data }:any) => {
                 const coins: TCoin[] = data.Data.map((coin: any) => {
                     const obj: TCoin = {
                         name: coin.CoinInfo.Name,
